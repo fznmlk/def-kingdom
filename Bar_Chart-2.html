@@ -1,0 +1,78 @@
+<!--
+    THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=dataset-simple0
+-->
+<!DOCTYPE html>
+<html style="height: 100%">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body style="height: 100%; margin: 0">
+        <div id="container" style="height: 100%"></div>
+
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+        <!-- Uncomment this line if you want to dataTool extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/extension/dataTool.min.js"></script>
+        -->
+        <!-- Uncomment this line if you want to use gl extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+        -->
+        <!-- Uncomment this line if you want to echarts-stat extension
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+        -->
+        <!-- Uncomment this line if you want to use map
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/china.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/world.js"></script>
+        -->
+        <!-- Uncomment these two lines if you want to use bmap extension
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+        -->
+
+        <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+option = {
+  legend: {},
+  tooltip: {},
+  dataset: {
+    source: [
+      ['product', 'Median xJewels', 'Average xJewels'],
+      ['29-09-2021', 72.29, 1461.70],
+      ['5-10-2021', 55, 1035],
+      ['10-10-2021', 50, 1008],
+      ['17-10-2021', 33.40, 991],
+      ['24-10-2021', 22.36, 811],
+      ['31-10-2021', 17.52, 671],
+      ['14-11-2021', 17.79, 639],
+      ['28-11-2021', 13.16, 478],
+      ['12-12-2021', 20, 460],
+      ['26-12-2021', 13.05, 368],
+      ['09-01-2021', 10.91, 331],
+      ['23-01-2021', 9.81, 280],
+      ]
+  },
+  xAxis: { type: 'category' },
+  yAxis: {},
+  // Declare several bar series, each will be mapped
+  // to a column of dataset.source by default.
+  series: [
+    { type: 'bar' , color: '#fbe375'}, 
+    { type: 'bar', color: '#009C44'}, 
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+    </body>
+</html>
+    

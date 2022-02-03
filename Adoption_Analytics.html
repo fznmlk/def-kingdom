@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header class="navigation">
+
+    <nav class="navbar navbar-expand-lg  py-4 pt-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="defi-kingdoms-logo" src="images/defi-kingdoms-logo.png" alt="Defi Kingdom Logo">
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+                <ul class="navbar-nav ml-auto" id="navibar">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Serendale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Crystalvale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">RoadMap</a></li>
+
+                </ul>
+
+                <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+                    <a href="https://defikingdoms.com/" class="btn btn-primary"><b>Play</b></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adoption Analytics</title>
+    <link rel="icon" type="image" href="images/jewel-icon.svg">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Tavern.css">
+    <link href="assets/styles.css" rel="stylesheet" />
+
+    <style>
+        #chart {
+            max-width: 650px;
+            margin: 35px auto;
+        }
+
+        #chart .apexcharts-xaxis-label {
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+            )
+    </script>
+
+
+    <script src="assets/js/apexcharts.js"></script>
+
+
+    <script>
+        // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+        // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+        var _seed = 42;
+        Math.random = function () {
+            _seed = _seed * 16807 % 2147483647;
+            return (_seed - 1) / 2147483646;
+        };
+    </script>
+
+    <script>
+        var colors = [
+            '#008FFB',
+            '#00E396',
+            '#FEB019',
+            '#FF4560',
+            '#775DD0',
+            '#546E7A',
+            '#26a69a',
+            '#D10CE8'
+        ]
+    </script>
+</head>
+
+<body>
+
+
+    <section class="serandale">
+        <h2 class=" content-title text-center">Adoption Analytics</h2>
+    </section>
+
+
+    <!-- Social Media Data -->
+    <h1 class="Main-Heading text-center p-5"> Social Media Analytics </h1>
+    <html style="height:50%">
+
+    <body style="height: 100%; margin: 0">
+        <div id="container-1" style="height: 100%">
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+            <!-- Uncomment this line if you want to dataTool extension
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/extension/dataTool.min.js"></script>
+                -->
+            <!-- Uncomment this line if you want to use gl extension
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+                -->
+            <!-- Uncomment this line if you want to echarts-stat extension
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+                -->
+            <!-- Uncomment this line if you want to use map
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/china.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/world.js"></script>
+                -->
+            <!-- Uncomment these two lines if you want to use bmap extension
+                <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+                -->
+            <script type="text/javascript">
+                var dom = document.getElementById("container-1");
+                var myChart = echarts.init(dom);
+                var app = {};
+
+                var option;
+
+
+
+                option = {
+                    legend: {},
+                    tooltip: {},
+                    dataset: {
+                        source: [
+                            ['product', 'Discord', 'Reddit', 'Twitter', 'Telegram'],
+                            ['12-December', 34400, 5300, 52400, 14693],
+                            ['26-December', 43100, 6400, 62300, 14086],
+                            ['9-January', 65100, 8300, 84600, 16095],
+                            ['23-January', 76000, 9600, 95400, 17142],
+
+                        ]
+                    },
+                    xAxis: { type: 'category' },
+                    yAxis: {},
+                    // Declare several bar series, each will be mapped
+                    // to a column of dataset.source by default.
+                    series: [
+                        { type: 'bar' },
+                        { type: 'bar', color: '#FF7F50' },
+                        { type: 'bar', color: '#00BFFF' },
+                        { type: 'bar' },
+                    ]
+                };
+
+                if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                }
+
+            </script>
+        </div>
+    </body>
+
+    </html>
+
+    <!-- xJewel Wallet Data  -->
+    <h1 class="Main-Heading text-center p-5"> xJewel Wallet Analytics </h1>
+    <html style="height:100%">
+
+    <body style="height: 50%; margin: 0">
+        <div id="container-2" style="height: 100%">
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+            <!-- Uncomment this line if you want to dataTool extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/extension/dataTool.min.js"></script>
+            -->
+            <!-- Uncomment this line if you want to use gl extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+            -->
+            <!-- Uncomment this line if you want to echarts-stat extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+            -->
+            <!-- Uncomment this line if you want to use map
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/china.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/world.js"></script>
+            -->
+            <!-- Uncomment these two lines if you want to use bmap extension
+            <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+            -->
+
+            <script type="text/javascript">
+                var dom = document.getElementById("container-2");
+                var myChart = echarts.init(dom);
+                var app = {};
+
+                var option;
+
+
+
+                option = {
+                    legend: {},
+                    tooltip: {},
+                    dataset: {
+                        source: [
+                            ['product', 'Median xJewels', 'Average xJewels'],
+                            ['29-09-2021', 72.29, 1461.70],
+                            ['5-10-2021', 55, 1035],
+                            ['10-10-2021', 50, 1008],
+                            ['17-10-2021', 33.40, 991],
+                            ['24-10-2021', 22.36, 811],
+                            ['31-10-2021', 17.52, 671],
+                            ['14-11-2021', 17.79, 639],
+                            ['28-11-2021', 13.16, 478],
+                            ['12-12-2021', 20, 460],
+                            ['26-12-2021', 13.05, 368],
+                            ['09-01-2021', 10.91, 331],
+                            ['23-01-2021', 9.81, 280],
+                        ]
+                    },
+                    xAxis: { type: 'category' },
+                    yAxis: {},
+                    // Declare several bar series, each will be mapped
+                    // to a column of dataset.source by default.
+                    series: [
+                        { type: 'bar', color: '#fbe375' },
+                        { type: 'bar', color: '#009C44' },
+                    ]
+                };
+
+                if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                }
+
+            </script>
+        </div>
+
+    </html>
+
+    <!-- Hero Analytics -->
+    <h1 class="Main-Heading text-center p-5"> Hero Analytics </h1>
+    <html style="height:100%">
+
+
+
+    <body style="height: 50%; margin: 0">
+        <div id="container-3" style="height: 100%"></div>
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+        <!-- Uncomment this line if you want to dataTool extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/extension/dataTool.min.js"></script>
+            -->
+        <!-- Uncomment this line if you want to use gl extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+            -->
+        <!-- Uncomment this line if you want to echarts-stat extension
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+            -->
+        <!-- Uncomment this line if you want to use map
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/china.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/map/js/world.js"></script>
+            -->
+        <!-- Uncomment these two lines if you want to use bmap extension
+            <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+            -->
+
+        <script type="text/javascript">
+            var dom = document.getElementById("container-3");
+            var myChart = echarts.init(dom);
+            var app = {};
+
+            var option;
+
+
+
+            option = {
+                legend: {},
+                tooltip: {},
+                dataset: {
+                    source: [
+                        ['product', 'Heroes Minted', 'Wallets Holding Heroes'],
+                        ['12-12-2021', 67504, 10510],
+                        ['26-12-2021', 80307, 12633],
+                        ['09-01-2021', 84821, 14385],
+                        ['23-01-2021', 102990, 15521],
+                    ]
+                },
+                xAxis: { type: 'category' },
+                yAxis: {},
+                // Declare several bar series, each will be mapped
+                // to a column of dataset.source by default.
+                series: [
+                    { type: 'bar', color: '#9C51E0' },
+                    { type: 'bar', color: '#F94892' },
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart.setOption(option);
+            }
+
+        </script>
+
+    </html>
+
+    <!-- Hero Analytics -->
+    <h1 class="Main-Heading text-center p-5"> DFK Player Pofiles Data</h1>
+
+    <!DOCTYPE html>
+    <html lang="en" style="width: 100%;">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title></title>
+
+        <link href="../../assets/styles.css" rel="stylesheet" />
+
+        <style>
+            #chart {
+                max-width: 650px;
+                margin: 35px auto;
+            }
+        </style>
+
+        <script>
+            window.Promise ||
+                document.write(
+                    '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+                )
+            window.Promise ||
+                document.write(
+                    '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+                )
+            window.Promise ||
+                document.write(
+                    '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+                )
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+        <script>
+            // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+            // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+            var _seed = 42;
+            Math.random = function () {
+                _seed = _seed * 16807 % 2147483647;
+                return (_seed - 1) / 2147483646;
+            };
+        </script>
+
+
+    </head>
+
+    <body>
+        <div id="chart"></div>
+
+        <script>
+
+            var options = {
+                series: [{
+                    name: "Profiles",
+                    data: [58382, 62009, 72265, 93677, 105714]
+                }],
+                chart: {
+                    height: 350,
+                    type: 'line',
+                    zoom: {
+                        enabled: false
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    curve: 'smooth'
+                },
+                title: {
+                    text: 'DFK Profiles',
+                    align: 'left'
+                },
+                grid: {
+                    row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                    },
+                },
+                xaxis: {
+                    categories: ['28-Nov-2021', '12-Dec-2021', '26-Dec-2021', '09-Jan-2022', '23-Jan-2022'],
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+
+
+        </script>
+
+
+    </body>
+
+    </html>
+
+
+
+</body>
+
+</html>

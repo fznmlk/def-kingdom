@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header class="navigation">
+
+    <nav class="navbar navbar-expand-lg  py-4 pt-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="defi-kingdoms-logo" src="images/defi-kingdoms-logo.png" alt="Defi Kingdom Logo">
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+                <ul class="navbar-nav ml-auto" id="navibar">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Serendale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Crystalvale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">RoadMap</a></li>
+
+                </ul>
+
+                <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+                    <a href="https://defikingdoms.com/" class="btn btn-primary"><b>Play</b></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" type="image" href="images/jewel-icon.svg">
+    <title>Tavern</title>
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Tavern.css">
+    <link href="assets/styles.css" rel="stylesheet" />
+
+    <style>
+        #chart {
+            max-width: 650px;
+            margin: 35px auto;
+        }
+
+        #chart .apexcharts-xaxis-label {
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+            )
+    </script>
+
+
+    <script src="assets/js/apexcharts.js"></script>
+
+
+    <script>
+        // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+        // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+        var _seed = 42;
+        Math.random = function () {
+            _seed = _seed * 16807 % 2147483647;
+            return (_seed - 1) / 2147483646;
+        };
+    </script>
+
+    <script>
+        var colors = [
+            '#008FFB',
+            '#00E396',
+            '#FEB019',
+            '#FF4560',
+            '#775DD0',
+            '#546E7A',
+            '#26a69a',
+            '#D10CE8'
+        ]
+    </script>
+</head>
+
+<body>
+
+
+    <section class="serandale">
+        <h2 class=" content-title text-center">Tavern</h2>
+    </section>
+
+    <!-- Main Wrapper of Whole Page -->
+    <div class="Tavern-Main-Wrapper">
+
+
+
+        <h1 class="Main-Heading text-center p-5"> Total Heros</h1>
+
+        <div class="Population-chart-wrapper">
+
+
+            <div class="Tavern-chart-item">
+                <iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61d30f7d3ba0f6c722f44e2b%26t%3Da810f33edaa90d8&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61d30f7d3ba0f6c722f44e2b%3Ft%3Da810f33edaa90d8&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Heroes by Level (Jan 10)"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+            <div class="Tavern-chart-item">
+                <iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61d30bf43ba0f68621f44e2b%26t%3D08d1622e046d305&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61d30bf43ba0f68621f44e2b%3Ft%3D08d1622e046d305&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Number of Heroes"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+
+        </div>
+
+        <!-- Hero Population  -->
+        <h1 class="Main-Heading text-center p-5"> Hero Population Data</h1>
+
+        <div class="Population-chart-wrapper">
+
+            <div class="Tavern-chart-item">
+                <h3 class="Heading-Tavern-chart"> Population By Rarity </h3>
+                <div class="" id="chart-bar-1">
+                    <script>
+                        var options = {
+                            series: [{
+                                data: [59893, 32723, 17421, 4173, 1432]
+                            }],
+                            chart: {
+                                height: 350,
+                                type: 'bar',
+                                events: {
+                                    click: function (chart, w, e) {
+                                        // console.log(chart, w, e)
+                                    }
+                                }
+                            },
+                            colors: colors,
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '45%',
+                                    distributed: true,
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false
+                            },
+                            legend: {
+                                show: false
+                            },
+                            xaxis: {
+                                categories: [
+                                    ['Common'],
+                                    ['Uncommon'],
+                                    ['Rare'],
+                                    ['Legendary'],
+                                    ['Mythic'],
+                                ],
+                                labels: {
+                                    style: {
+                                        colors: colors,
+                                        fontSize: '12px'
+                                    }
+                                }
+                            }
+                        };
+
+                        var chart = new ApexCharts(document.querySelector("#chart-bar-1"), options);
+                        // var chart = new ApexCharts(document.querySelector("#chart-bar-2"), options);
+                        chart.render();
+
+
+                    </script>
+                </div>
+            </div>
+            <div class="Tavern-chart-item">
+                <h3 class="Heading-Tavern-chart"> Population By Professions </h3>
+                <div class="" id="chart-bar-2">
+                    <script>
+
+                        var options = {
+                            series: [{
+                                data: [27347, 31797, 27580, 28918]
+                            }],
+                            chart: {
+                                height: 350,
+                                type: 'bar',
+                                events: {
+                                    click: function (chart, w, e) {
+                                        // console.log(chart, w, e)
+                                    }
+                                }
+                            },
+                            colors: colors,
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '45%',
+                                    distributed: true,
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false
+                            },
+                            legend: {
+                                show: false
+                            },
+                            xaxis: {
+                                categories: [
+                                    'Foraging',
+                                    'Mining',
+                                    'Fishing',
+                                    'Gardening'
+                                ],
+                                labels: {
+                                    style: {
+                                        colors: colors,
+                                        fontSize: '12px'
+                                    }
+                                }
+                            }
+                        };
+
+                        var chart = new ApexCharts(document.querySelector("#chart-bar-2"), options);
+                        // var chart = new ApexCharts(document.querySelector("#chart-bar-2"), options);
+                        chart.render();
+
+
+                    </script>
+                </div>
+            </div>
+            <div class="Tavern-chart-item">
+                <h3 class="Heading-Tavern-chart"> Population By Main Class </h3>
+                <div class="" id="chart-bar-3">
+                    <script>
+
+                        var options = {
+                            series: [{
+                                data: [12356, 11898, 11447, 11384, 11371, 11223, 11085, 10987, 5713, 5187, 5176, 4903, 1422, 1390, 86]
+                            }],
+                            chart: {
+                                height: 350,
+                                type: 'bar',
+                                events: {
+                                    click: function (chart, w, e) {
+                                        // console.log(chart, w, e)
+                                    }
+                                }
+                            },
+                            colors: colors,
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '45%',
+                                    distributed: true,
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false
+                            },
+                            legend: {
+                                show: false
+                            },
+                            xaxis: {
+                                categories: [
+                                    'Knight',
+                                    'Warrior',
+                                    'Thief',
+                                    'Pirate',
+                                    'Priest',
+                                    'Monk',
+                                    'Archer',
+                                    'Wizard',
+                                    'Paladin',
+                                    'Ninja',
+                                    'DarkKnight',
+                                    'Summoner',
+                                    'Dragoon',
+                                    'Sage',
+                                    'T1'
+                                ],
+                                labels: {
+                                    style: {
+                                        colors: colors,
+                                        fontSize: '12px'
+                                    }
+                                }
+                            }
+                        };
+
+                        var chart = new ApexCharts(document.querySelector("#chart-bar-3"), options);
+                        // var chart = new ApexCharts(document.querySelector("#chart-bar-2"), options);
+                        chart.render();
+
+
+                    </script>
+                </div>
+            </div>
+            <div class="Tavern-chart-item">
+                <h3 class="Heading-Tavern-chart"> Population By Gen </h3>
+                <div class="" id="chart-bar-4">
+                    <script>
+
+                        var options = {
+                            series: [{
+                                data: [2094, 25189, 30000, 28908, 13805, 5002, 1505, 380, 94, 21, 5, 2]
+                            }],
+                            chart: {
+                                height: 350,
+                                type: 'bar',
+                                events: {
+                                    click: function (chart, w, e) {
+                                        // console.log(chart, w, e)
+                                    }
+                                }
+                            },
+                            colors: colors,
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '45%',
+                                    distributed: true,
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false
+                            },
+                            legend: {
+                                show: false
+                            },
+                            xaxis: {
+                                categories: [
+                                    0,
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    8,
+                                    "9 (21)",
+                                    '10 (5)',
+                                    "11 (2)"
+                                ],
+                                labels: {
+                                    style: {
+                                        colors: colors,
+                                        fontSize: '12px'
+                                    }
+                                }
+                            }
+                        };
+
+                        var chart = new ApexCharts(document.querySelector("#chart-bar-4"), options);
+                        // var chart = new ApexCharts(document.querySelector("#chart-bar-2"), options);
+                        chart.render();
+
+
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="Main-Heading text-center p-5"> Hero Wallets Data</h1>
+
+        <!-- Wallet-Medium-Data -->
+        <div class="Wallet-Main-Wrapper">
+
+            <div class="Tavern-chart-item-2"><iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61c9ffc73ba0f6314ed831e0%26t%3D61b6ca7171b8faa&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61c9ffc73ba0f6314ed831e0%3Ft%3D61b6ca7171b8faa&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Hero Wallets"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+            <div class="Tavern-chart-item-2">
+                <iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61ca00143ba0f6414ed831e0%26t%3Dfadb3526374e322&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61ca00143ba0f6414ed831e0%3Ft%3Dfadb3526374e322&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Hero Wallets / Total Wallets"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+            <div class="Tavern-chart-item-2">
+                <iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61ca01733ba0f6a24ed831e0%26t%3D626cedd11c35b5c&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61ca01733ba0f6a24ed831e0%3Ft%3D626cedd11c35b5c&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Hero Wallets by Heroes Held"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+            <div class="Tavern-chart-item-2">
+                <iframe
+                    src="https://cdn.embedly.com/widgets/media.html?src=%2F%2Fembed.chartblocks.com%2F1.0%2F%3Fc%3D61ca01c83ba0f6354fd831e0%26t%3D1587fa80b558851&amp;display_name=ChartBlocks&amp;url=https%3A%2F%2Fpublic.chartblocks.com%2Fc%2F61ca01c83ba0f6354fd831e0%3Ft%3D1587fa80b558851&amp;image=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F170ccb4c74548e1279fb6c2eb696fb78%3Fd%3Dmm&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=chartblocks"
+                    allowfullscreen="" frameborder="0" height="450" width="800" title="Hero Wallets by Percentile"
+                    class="ef es eo ex w" scrolling="auto"></iframe>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+
+
+div{
+    height: 100%;
+}
+
+.Analytica-Flex-Wrap {
+    display: flex;
+
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+
+#container-1 {
+    height: 100%;
+}

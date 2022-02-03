@@ -1,0 +1,29 @@
+
+.flex-wrap-charts h3{
+    color: rgb(62, 185, 14);
+}
+
+.flex-wrap-charts .White-color{
+    color: white;
+}
+
+.flex-wrap-charts .btn-primary {
+    background-color: rgb(0, 0, 0);
+}
+
+.flex-wrap-charts {
+    display: flex;
+
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding: 20px;
+}
+
+.flex-wrap-charts .chart{
+    flex-basis: 50%;
+    padding: 20px;
+}
+
